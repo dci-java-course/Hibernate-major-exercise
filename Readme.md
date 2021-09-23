@@ -1,44 +1,74 @@
-# Exercise #  - Hibernate
+# Solution #  - Hibernate exercise
 
-Using the Hibernate library and any relational database (e.g. H2), perform the following tasks :
+# Task 1
 
+Sample pom.xml file:
 
-1. Create classes representing entities with relationships described in the diagram.
+<img src="images/1. pom-xml.jpg"
+ alt="Markdown Monster icon" style="width:80%"/><br/>
 
-    <img src="erd_diagram.JPG"
-    alt="Markdown Monster icon"/><br/>   
-     - the identifier for each class has to be the automatically generated UUID.  
-     - set the owner of the many-to-many relationship to the Actor class (i.e. mappedBy is in the Movie class)  
-     - all tables have to be created by Hibernate at application startup
+hibernate.cfg.xml in the classpath:
 
+<img src="images/2. Hibernate-cfg-xml.jpg"
+ alt="Markdown Monster icon" style="width:80%"/><br/>
 
-2. Issue a separate base class that will represent a common way of mapping an entity identifier. Use the @MappedSuperclass annotation.
+Entities:
 
+<img src="images/3. Actor.jpg"
+ alt="Markdown Monster icon" style="width:80%"/><br/>
 
-3. Implement the GenreRepository class which will be responsible for:
+<img src="images/4. Genre.jpg"
+  alt="Markdown Monster icon" style="width:80%"/><br/>
 
-      - adding Genre records to the database
-      - deleting records of type Genre from the database
-      - searching records by name
-      - searching for records by identifier
-      - returning all records<br/><br/>
+<img src="images/5.Movie.jpg"
+  alt="Markdown Monster icon" style="width:80%"/><br/>
 
-  In this and the following tasks, assume that a correctly initialized object of type EntityManager comes in the constructor of the Repository class. Remember to create a transaction when modifying objects in the database.
+Main method sample :
 
-
-4. Implement the ActorRepository class which will be responsible for:
-
-      - saving objects of type Actor to the database
-      - look for objects in the database of type Actor by identifier
-      - search for objects in the Actor type database that were born after a certain year (i.e. the year is a method parameter)
-      - look for objects in the database of the Actor type, the names of which end with the specified value of theString type object<br/><br/>
+<img src="images/6. JdbcApplicationClass.jpg"
+  alt="Markdown Monster icon" style="width:80%"/><br/>  
 
 
-5. Implement the MovieRepository class which will be responsible for:
+# Task 2
 
-    - adding Movie records to the database
-    - removing Movie records from the database
-    - searching records by title
-    - searching for records by identifier
-    - returning all records
-    - retrieving all records with actors appearing in it (do left join fetch in the query)
+<img src="images/7. BaseEntity.jpg"
+  alt="Markdown Monster icon" style="width:80%"/><br/>
+
+Files changed in reference to task 1:
+
+<img src="images/8. Actor.jpg"
+  alt="Markdown Monster icon" style="width:80%"/><br/>
+
+<img src="images/9. Genre.jpg"
+  alt="Markdown Monster icon" style="width:80%"/><br/>
+
+<img src="images/10.Movie.jpg"
+    alt="Markdown Monster icon" style="width:80%"/><br/>          
+
+
+# Task 3
+
+<img src="images/11. genrerepository.JPG"
+    alt="Markdown Monster icon" style="width:80%"/><br/>
+
+A sample class using this repository:              
+
+<img src="images/12. jdbcApplicationclass.jpg"
+    alt="Markdown Monster icon" style="width:80%"/><br/>
+
+
+# Task 4
+
+<img src="images/13.ActorRepository.jpg"
+    alt="Markdown Monster icon" style="width:80%"/><br/>
+
+
+# Task 5
+
+<img src="images/14.MovieRepository.jpg"
+    alt="Markdown Monster icon" style="width:80%"/><br/>
+
+Sample use:
+
+<img src="images/15. JdbcApplication.JPG"
+    alt="Markdown Monster icon" style="width:80%"/><br/>
