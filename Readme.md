@@ -1,4 +1,4 @@
-# Exercise #5  - Hibernate
+# Exercise # 5  - Hibernate
 
 Using the Hibernate library and any relational database (e.g. H2), perform the following tasks :
 
