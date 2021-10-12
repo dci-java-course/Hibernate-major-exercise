@@ -1,4 +1,4 @@
-# Exercise #  - Hibernate
+# Exercise # 5  - Hibernate
 
 Using the Hibernate library and postgresql database, perform the following tasks :
 
