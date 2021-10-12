@@ -1,7 +1,8 @@
 # Exercise #  - Hibernate
 
-Using the Hibernate library and any relational database (e.g. H2), perform the following tasks :
+Using the Hibernate library and postgresql database, perform the following tasks :
 
+Verify that you have PostgreSQL server (version > 9.6.25) and any sql client to connect to the PostgreSQL server pre-installed. If you don't have you can download the installer from [Here](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads). The installer includes the PostgreSQL server, pgAdmin: a graphical tool for managing and developing your databases.
 
 1. Create classes representing entities with relationships described in the diagram.
 
